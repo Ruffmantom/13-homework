@@ -1,4 +1,6 @@
 var express = require("express");
+var exphbs = require("express-handlebars");
+var ORM = require("./config/orm");
 
 var PORT = process.env.PORT || 8080;
 
@@ -16,6 +18,16 @@ app.use(express.json());
 /////// this is for using handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+// 
+// //
+//  // //
+// start of ORM code
+ORM.selectAll(burgers);
+
+
+
+
+
 
 // start the server
 app.listen(PORT, function () {
