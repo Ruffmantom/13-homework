@@ -24,9 +24,9 @@ app.set("view engine", "handlebars");
 //  // //
 // start of ORM code
 var burger = "asdflj";
-orm.selectAll("burgers");
-// orm.insertOne("burgers", burger);
-// orm.updateOne("burgers", "Small Burger", 4);
+orm.selectAll();
+// orm.insertOne("nommy");
+// orm.updateOne("freekingWorked", 2);
 
 
 
