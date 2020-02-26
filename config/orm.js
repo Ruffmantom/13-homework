@@ -1,31 +1,34 @@
 var connection = require("./connection");
+const cTable = require("console.table");
 
 
 var orm = {
     selectAll: function (table) {
-        var query = "SELECT * FROM ??";
+        var query = "SELECT * FROM ??;";
         connection.query(query, [table], function (err, result) {
             if (err) throw err;
-            console.log(result);
+            console.table(result);
             console.log("selected all" + table);
         })
     },
 
-    insertOne: function (table, burgerName, devoured) {
-        var query = "INSERT INTO ?? (burger_name, devoured) VALUES ('??', ??)";
-        connection.query(query, [table, burgerName, devoured], function (err, result) {
+    insertOne: function (table, burgerName) {
+        var query = "INSERT INTO ?? (burger_name, devoured) VALUES ('??', false);";
+        var burger = burgerName.toString();
+        connection.query(query, [table, burger], function (err, result) {
             if (err) throw err;
-            console.log(result);
             console.log("Add complete");
+            // console.log(result);
         })
     },
 
-    updateOne: function (table, burgerName, devoured, id) {
-        var query = "update ?? set burger_name = '??', devoured = ?? where burger_id = ?"
-        connection.query(query, [table, burgerName, devoured, id], function (err, result) {
+    updateOne: function (table, burgerName, id) {
+        var query = "UPDATE ?? SET burger_name = ??, devoured = false WHERE burger_id = ?;"
+        connection.query(query, [table, burgerName.toString(), id], function (err, result) {
             if (err) throw err;
-            console.log(result);
             console.log("Update complete");
+            // console.log(result);
+
         })
     }
 }

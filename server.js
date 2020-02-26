@@ -1,6 +1,7 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
-var ORM = require("./config/orm");
+var orm = require("./config/orm");
+const cTable = require("console.table");
 
 var PORT = process.env.PORT || 8080;
 
@@ -22,7 +23,11 @@ app.set("view engine", "handlebars");
 // //
 //  // //
 // start of ORM code
-ORM.selectAll(burgers);
+var burger = "asdflj";
+orm.selectAll("burgers");
+// orm.insertOne("burgers", burger);
+// orm.updateOne("burgers", "Small Burger", 4);
+
 
 
 
