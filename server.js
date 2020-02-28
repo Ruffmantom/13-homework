@@ -1,8 +1,5 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
-var orm = require("./config/orm");
-const cTable = require("console.table");
-var router = express.Router();
 
 var PORT = process.env.PORT || 8080;
 
@@ -17,35 +14,16 @@ app.use(express.json());
 
 ///
 /////
-/////// this is for using handlebars
+// this is for using handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 // 
-// //
-//  // //
-// start of ORM code
-// orm.selectAll();
-// // orm.insertOne("BURGER");
-// // orm.updateOne("BURGER", 2);
-app.get("/", function (req, res) {
 
-});
-
-app.post("/api/burgers", function (req, res) {
-
-});
-
-app.put("/api/burgers/:id", function (req, res) {
-
-});
-
-
-
-
-
+var routes = require("./controllers/burgers_controller.js");
+app.use(routes);
 
 
 // start the server
 app.listen(PORT, function () {
-    console.log("App now listening at localhost:" + PORT);
+    console.log("App now listening at http://localhost:" + PORT);
 });
