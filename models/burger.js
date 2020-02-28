@@ -13,8 +13,10 @@ var burger = {
             cb(res);
         });
     },
-    updateOne: function (burgerName, devoured, id, cb) {
-        orm.updateOne(burgerName, devoured, id, function (res) {
+    // devoured in this bottom function is refering to "condition like in the cat excersise"
+    // its a boolean 
+    updateOne: function (devoured, id, cb) {
+        orm.updateOne(devoured, id, function (res) {
             cb(res);
         });
     }
