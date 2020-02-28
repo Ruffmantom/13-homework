@@ -2,6 +2,7 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var orm = require("./config/orm");
 const cTable = require("console.table");
+var router = express.Router();
 
 var PORT = process.env.PORT || 8080;
 
@@ -23,10 +24,20 @@ app.set("view engine", "handlebars");
 // //
 //  // //
 // start of ORM code
-var burger = "asdflj";
-orm.selectAll();
-// orm.insertOne("nommy");
-// orm.updateOne("freekingWorked", 2);
+// orm.selectAll();
+// // orm.insertOne("BURGER");
+// // orm.updateOne("BURGER", 2);
+app.get("/", function (req, res) {
+
+});
+
+app.post("/api/burgers", function (req, res) {
+
+});
+
+app.put("/api/burgers/:id", function (req, res) {
+
+});
 
 
 
