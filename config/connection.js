@@ -3,7 +3,7 @@ var mysql = require("mysql");
 var MYSQL_PASSWORD = "bcdae33f";
 
 var connection = mysql.createConnection({
-    host: "localhost" || "us-cdbr-iron-east-04.cleardb.net",
+    host: "us-cdbr-iron-east-04.cleardb.net",
     port: 3306,
     user: "b5fe3fa986313a",
     password: MYSQL_PASSWORD,
