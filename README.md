@@ -10,6 +10,12 @@ Then came the model and the controllers this got me stumped for hours just tryin
 
 ## App working
 [Heroku app](https://sheltered-journey-59778.herokuapp.com/)
+Heroku app with a database is not fun to set up so this link might not work.
+
+
+
+## Youtube Video of it working
+[App working video](https://youtu.be/UrJ8oKjvkxw)
 
 ---
 ##  License and Copyright 
