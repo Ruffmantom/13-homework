@@ -30,15 +30,15 @@ npm start
 
 ```
 ### Once the app is running You will get this screen.
-![startup](puplic/assets/img/burger.PNG)
+![startup](public/assets/img/burger.PNG)
 
 ### To add a burger, type into the input and click Create.Then you will see it pop up in the list below on the left.
-![add a burger](puplic/assets/img/addingBurger.PNG)
+![add a burger](public/assets/img/addingBurger.PNG)
 ---
-![list view](puplic/assets/img/addedBurger.PNG)
+![list view](public/assets/img/addedBurger.PNG)
 
 ### If you click on devour, it will change the key in the schema to true and move the item over to the right side list.
-![devoured burger](puplic/assets/img/devoured.PNG)
+![devoured burger](public/assets/img/devoured.PNG)
 
 --- 
 ### Making the Eat-da-burger app. 
